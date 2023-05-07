@@ -32,16 +32,12 @@ import ChildrenProps from './components/patterns/childrenProps/ChildrenProps';
 import Composition from './components/patterns/composition/Composition';
 import RenderProps from './components/patterns/renderProps/RenderProps';
 
-
-
 function App() {
   return (
-    <div className="App">
-
+    <div className='App'>
       <h1>React for TS</h1>
 
       <Chapter>
-        
         <h2>I. Props</h2>
 
         <BasicProps
@@ -52,29 +48,29 @@ function App() {
           list={[
             { name: 'Peter', age: 42, hasSomething: true },
             { name: 'Pete', age: 32, hasSomething: false },
-            { name: 'Pet', age: 22, hasSomething: false }
+            { name: 'Pet', age: 22, hasSomething: false },
           ]}
         />
         <AdvancedProps />
         <EventProps />
         <StyleProps styles={{ padding: '5px', border: '1px solid red' }} />
         <ReactComponentProps />
-        <ExtractProps user={{
-          id: 1,
-          name: {
-            firstName: 'Peter',
-            lastName: 'L'
-          }
-        }} />
+        <ExtractProps
+          user={{
+            id: 1,
+            name: {
+              firstName: 'Peter',
+              lastName: 'L',
+            },
+          }}
+        />
         <GenericProps />
         <NeverProps />
-
-        
       </Chapter>
 
       <Chapter>
         <h2>II. Hooks</h2>
-        
+
         <h3>1. useState</h3>
         <KnownState />
         <UnknownState />
@@ -83,7 +79,7 @@ function App() {
         <h3>2. useReducer</h3>
         <BasicReducer />
         <ReducerStrictType />
-        
+
         <h3>3. useContext</h3>
         <ThemeKnownContextProvider>
           <KnownContext />
@@ -101,7 +97,6 @@ function App() {
 
         <h3>6. custom hook</h3>
         <CounterWithHook />
-        
       </Chapter>
 
       <Chapter>
@@ -111,7 +106,6 @@ function App() {
         <Composition />
         <RenderProps />
       </Chapter>
-
     </div>
   );
 }
